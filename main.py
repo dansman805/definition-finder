@@ -15,7 +15,7 @@ defContents = soup.select('.def-content')
 
 try:
     __ = defContents[0]
-except:
+except IndexError:
     print '\nThat definition is not available.'
     quit()
 
