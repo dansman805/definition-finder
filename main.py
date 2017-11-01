@@ -8,7 +8,7 @@ except IndexError:
 url = 'http://www.dictionary.com/browse/' + word
 res = requests.get(url)
 
-soup = bs4.BeautifulSoup(res.text, 'html5lib')
+soup = bs4.BeautifulSoup(res.text, 'html.parser')
 
 #First definition is found at <div class="def-content">
 defContents = soup.select('.def-content')
